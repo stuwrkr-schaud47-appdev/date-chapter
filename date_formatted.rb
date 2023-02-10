@@ -2,9 +2,13 @@
 #
 # "The year is: 2022, the calendar day is: 1, and the month is: 7."
 
+require "date"
 
-year = Time.now.strftime("%Y")
-calday = Time.now.strftime("%w")
-month = Time.now.strftime("%m")
+# year = DateTime.strftime("%Y")
+# calday = DateTime.strftime("%e")
+# month = DateTime.strftime("%m")
 
-p "The year is: " + year + ", the calendar day is: " + calday + ", and the month is: " + month[1..-1] + "."
+datetoday = Date.today
+
+p "The year is: " + datetoday.year.to_s + ", the calendar day is: " + datetoday.day.to_s + ", and the month is: " + datetoday.month.to_s + "."
+#p "The year is: " + datetoday.strftime("%Y") + ", the calendar day is: " + datetoday.strftime("%e") + ", and the month is: " + datetoday.strftime("%m")[1..-1]
